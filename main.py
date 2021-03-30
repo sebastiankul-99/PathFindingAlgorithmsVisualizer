@@ -477,7 +477,7 @@ def main():
 					for j in range(grid.columns):
 						points.append(Point(i, j, grid))
 
-				if event.key == pygame.K_LEFT:
+				if event.key == pygame.K_SPACE:
 					if chosen =="A*":
 						Astar(WIN, grid, points, points[startEndIndex[0]],points[startEndIndex[1]])
 					elif chosen =="dijkstra":
