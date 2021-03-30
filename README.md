@@ -6,4 +6,4 @@ Right mouse button - put an ending point </br>
 Middle mouse button - remove wall or ending point </br>
 Space - Start visualization</br>
 ## Quick demo:<br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u5RmaVj7JQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Pathfinding Visualizer ](http://img.youtube.com/vi/u5RmaVj7JQ8/0.jpg)](http://www.youtube.com/watch?v=u5RmaVj7JQ8 "Pathfinding Visualizer")
