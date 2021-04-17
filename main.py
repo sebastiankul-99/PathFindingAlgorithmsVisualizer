@@ -312,20 +312,17 @@ def BFS(win, grid, graph, start, end):
 	already_visited.append(start)
 	found = False
 	run = True
-	path = defaultdict(list)
 	path = {}
 	finish_path = []
-	temp = None
 	clock = pygame.time.Clock()
 	while queue and run:
 		clock.tick(120)
-		# Dequeue a vertex from queue
 		current = queue.popleft()
 		if current.x == end.x and current.y == end.y:
 			found = True
 			run = False
 			temp = current
-			found_path =False
+			found_path = False
 			while not found_path:
 
 				temp = path[temp]
