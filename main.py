@@ -202,13 +202,13 @@ def Astar(WIN, grid, graph, start, end):
 					open_set_hash.add(graph[neighbor])
 
 					grid.arr[graph[neighbor].x, graph[neighbor].y] = 3
-					#neighbor.make_open()
+	
 
 		if current.x != start.x and current.y != start.y:
 
 			grid.arr[current.x,current.y] = 3
 		draw(WIN, grid)
-			#current.make_closed()
+
 	path_unreachable()
 	return
 
