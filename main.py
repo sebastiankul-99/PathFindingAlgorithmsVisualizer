@@ -67,6 +67,7 @@ class Point:
 	def __lt__(self, other):
 		return self.cost > other.cost
 
+
 class Grid:
 	def __init__(self, numOfRows, numOfColumns):
 		self.rows = numOfRows
@@ -213,18 +214,14 @@ def Astar(WIN, grid, graph, start, end):
 	return
 
 
-
-
 def dijkstra(WIN, grid, graph, start, goal):
-	shortest_distance = {}
 	predecessor = {}
 	grid.arr[start.x, start.y] = 2
 	grid.arr[goal.x, goal.y] = 2
 	unseenNodes = graph.copy()
 	infinity = 9999999
 	path = []
-	for node in unseenNodes:
-		shortest_distance[node]= infinity
+	shortest_distance = {node:infinity for node in unseenNodes}
 	shortest_distance[start] = 0
 	clock = pygame.time.Clock()
 	run = True
@@ -254,11 +251,10 @@ def dijkstra(WIN, grid, graph, start, goal):
 						grid.arr[graph[childNode].x, graph[childNode].y] = 3
 					predecessor[graph[childNode]] = minNode
 				if graph[childNode] == goal:
-					run =False
+					run = False
 					break
 		draw(WIN, grid)
 		unseenNodes.remove(minNode)
-
 	currentNode = goal
 	while currentNode != start:
 		try:
@@ -277,10 +273,10 @@ def dijkstra(WIN, grid, graph, start, goal):
 
 def DFS(win, grid, graph, start, end):
 	infinity = 9999999
-	where_to_go_next =[ ]
+	where_to_go_next = [ ]
 	where_to_go_next.append(start)
 	already_visited = []
-	current_node =start
+	current_node = start
 	run = True
 	found = False
 	clock = pygame.time.Clock()
